@@ -14,4 +14,4 @@ Biće naknadno objavljeno.
 
 ## Obrađene teme na kursu
 
-Obrađene teme će biti ažurirane nakon svake nedelje.
+1. Prefiksno drvo
