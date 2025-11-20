@@ -76,7 +76,7 @@ int main() {
     int n;
     cin >> n;
 
-    vector<int> arr(n, 0);
+    vector<int> arr(n);
     int max = INT_MIN;
     for(int i = 0; i < n; i++) {
         cin >> arr[i];
@@ -84,8 +84,8 @@ int main() {
             max = arr[i];
     }
 
-    vector<int> seg_arr(max, 0);
-    SegmentTree<int> seg_tree(seg_arr, 0, [](int a, int b){ return a + b; });
+    vector<int> seg_arr(max+1, 0);
+    SegmentTree<int> seg_tree(seg_arr, 0, [](int a, int b) { return a + b; });
 
     int inversions = 0;
     for(int i = 0; i < n; i++) {
