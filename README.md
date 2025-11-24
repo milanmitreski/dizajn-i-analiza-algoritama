@@ -40,5 +40,6 @@ dogovora.
 
 ## Obrađene teme na kursu
 
-1. Prefiksno drvo (Autocomplete)
-2. Segmentno drvo (Broj inverzija)
+1. Prefiksno drvo
+2. Segmentno drvo
+3. Union-Find
