@@ -5,7 +5,11 @@
 struct TrieNode {
     public:
         TrieNode(): wordEnd(false) {}
-        ~TrieNode() { this->free(); }
+        ~TrieNode() {
+            for(auto child : children) {
+                delete child.second;
+            }
+        }
 
         bool find(const std::string word) {
             return find(word, 0);
@@ -32,13 +36,6 @@ struct TrieNode {
     private:
         bool wordEnd;
         std::unordered_map<char, TrieNode*> children;
-
-        void free() {
-            for(auto branch : this->children) {
-                branch.second->free();
-            }
-            delete this;
-        }
 
         bool find(const std::string& word, int pos) {
             if(word.size() == pos) {
