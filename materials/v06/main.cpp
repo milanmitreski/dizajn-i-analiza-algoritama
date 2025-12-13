@@ -86,7 +86,7 @@ public:
         Kahn, DFS
     };
 
-    void topSort(TopSort type) {
+    vector<int> topSort(TopSort type) {
         if(!this->m_directed) {
             cerr << "Moguce je topoloski sortirati samo usmereni graf!" << endl;
         }
@@ -94,14 +94,45 @@ public:
         switch (type)
         {
         case TopSort::Kahn:
-            kahnTopSort();
-            break;
+            return kahnTopSort();
         case TopSort::DFS:
-            dfsTopSort();
-            break;
+            return dfsTopSort();
         }
     }
 
+    void bridges() {
+        vector<bool> visited(this->m_n, false);
+        vector<int> preorder(this->m_n);
+        vector<int> lowlink(this->m_n);
+        vector<int> dfsParent(this->m_n, -1);
+        vector<pair<int, int>> bridges;
+        int preorderNo = 0;
+
+        dfsBridges(0, visited, preorder, preorderNo, lowlink, dfsParent, bridges);
+        cout << "Mostovi u datom grafu su: " << endl;
+        for(int i = 0; i < bridges.size(); i++) {
+            cout << "(" << bridges[i].first << ", " << bridges[i].second << ") " ;
+        }
+        cout << endl;
+    }
+
+    void cutVertices() {
+        vector<bool> visited(this->m_n, false);
+        vector<int> preorder(this->m_n);
+        vector<int> lowlink(this->m_n);
+        vector<int> dfsParent(this->m_n, -1);
+        vector<bool> cutVertices(this->m_n, false);
+        int preorderNo = 0;
+
+        dfsCutVertices(0, visited, preorder, preorderNo, lowlink, dfsParent, cutVertices);
+        cout << "Artikulacione tacke u datom grafu su: " << endl;
+        for(int i = 0; i < this->m_n; i++) {
+            if(cutVertices[i]) {
+                cout << i << " ";
+            }
+        }
+        cout << endl;
+    }
 private:
     vector<vector<int>> m_neighbours;
     int m_n;
@@ -116,7 +147,7 @@ private:
         // izlazna obrada
     }
 
-    void kahnTopSort() {
+    vector<int> kahnTopSort() {
         vector<int> inDegrees(this->m_n, 0);
         vector<int> topSort;
         int visited = 0;
@@ -158,9 +189,11 @@ private:
                 cout << "Graf nije aciklicki" << endl;
             }
         }
+
+        return topSort;
     }
 
-    void dfsTopSort() {
+    vector<int> dfsTopSort() {
         vector<bool> visited(this->m_n, false);
         vector<int> topSort;
 
@@ -175,6 +208,8 @@ private:
         for(int i = 0; i < this->m_n; i++) {
             cout << topSort[i] << ": " << i+1 << endl;
         }
+
+        return topSort;
     }
     
     void dfsTopSort(int u, vector<bool>& visited, vector<int>& topSort) {
@@ -187,6 +222,65 @@ private:
         }
 
         topSort.push_back(u);
+    }
+
+    void dfsBridges(int u, vector<bool>& visited, vector<int>& preorder, int& preorderNo, 
+            vector<int>& lowlink, vector<int> dfsParent, vector<pair<int, int>> bridges) {
+        visited[u] = true;
+        preorder[u] = preorderNo++;
+        lowlink[u] = preorder[u];
+
+        for(int neighbour: this->m_neighbours[u]) {
+            if(visited[neighbour]) {
+                if(neighbour != dfsParent[u] && preorder[neighbour] < lowlink[u]) {
+                    lowlink[u] = preorder[neighbour];
+                }
+            } else {
+                dfsParent[neighbour] = u;
+                dfsBridges(neighbour, visited, preorder, preorderNo, lowlink, dfsParent, bridges);
+
+                if(lowlink[neighbour] < lowlink[u]) {
+                    lowlink[u] = lowlink[neighbour];
+                }
+
+                if(lowlink[neighbour] > preorder[u]) {
+                    bridges.emplace_back(u, neighbour);
+                }
+            }
+        }
+    }
+
+    void dfsCutVertices(int u, vector<bool>& visited, vector<int>& preorder, int& preorderNo, 
+            vector<int>& lowlink, vector<int> dfsParent, vector<bool> cutVertices) {
+        visited[u] = true;
+        preorder[u] = preorderNo++;
+        lowlink[u] = preorder[u];
+
+        int childNo = 0;
+
+        for(int neighbour: this->m_neighbours[u]) {
+            if(visited[neighbour]) {
+                if(neighbour != dfsParent[u] && preorder[neighbour] < lowlink[u]) {
+                    lowlink[u] = preorder[neighbour];
+                }
+            } else {
+                childNo++;
+                dfsParent[neighbour] = u;
+                dfsCutVertices(neighbour, visited, preorder, preorderNo, lowlink, dfsParent, cutVertices);
+
+                if(lowlink[neighbour] < lowlink[u]) {
+                    lowlink[u] = lowlink[neighbour];
+                }
+
+                if(dfsParent[u] != -1 && lowlink[neighbour] >+ preorder[u]) {
+                    cutVertices[u] = true;
+                }
+            }
+        }
+
+        if(dfsParent[u] == -1 && childNo > 1) {
+            cutVertices[u] = true;
+        }
     }
 };
 

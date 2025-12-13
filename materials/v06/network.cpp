@@ -86,7 +86,7 @@ public:
         Kahn, DFS
     };
 
-    void topSort(TopSort type) {
+    vector<int> topSort(TopSort type) {
         if(!this->m_directed) {
             cerr << "Moguce je topoloski sortirati samo usmereni graf!" << endl;
         }
@@ -94,12 +94,14 @@ public:
         switch (type)
         {
         case TopSort::Kahn:
-            kahnTopSort();
-            break;
+            return kahnTopSort();
         case TopSort::DFS:
-            dfsTopSort();
-            break;
+            return dfsTopSort();
         }
+    }
+
+    int num_paths(int s, int t) {
+        // TODO
     }
 
 private:
@@ -116,7 +118,7 @@ private:
         // izlazna obrada
     }
 
-    void kahnTopSort() {
+    vector<int> kahnTopSort() {
         vector<int> inDegrees(this->m_n, 0);
         vector<int> topSort;
         int visited = 0;
@@ -158,9 +160,11 @@ private:
                 cout << "Graf nije aciklicki" << endl;
             }
         }
+
+        return topSort;
     }
 
-    void dfsTopSort() {
+    vector<int> dfsTopSort() {
         vector<bool> visited(this->m_n, false);
         vector<int> topSort;
 
@@ -175,6 +179,8 @@ private:
         for(int i = 0; i < this->m_n; i++) {
             cout << topSort[i] << ": " << i+1 << endl;
         }
+
+        return topSort;
     }
     
     void dfsTopSort(int u, vector<bool>& visited, vector<int>& topSort) {
@@ -188,8 +194,12 @@ private:
 
         topSort.push_back(u);
     }
+
+    int num_paths(const int s, const int t, const vector<int>& permutation) {
+        // TODO
+    }
 };
 
 int main() {
-
+    // TODO
 }

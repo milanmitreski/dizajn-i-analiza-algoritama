@@ -102,6 +102,13 @@ public:
         }
     }
 
+    void bridges() {
+        // TODO
+    }
+
+    void cutVertices() {
+        // TODO
+    }
 private:
     vector<vector<int>> m_neighbours;
     int m_n;
@@ -187,6 +194,16 @@ private:
         }
 
         topSort.push_back(u);
+    }
+
+    void dfsBridges(int u, vector<bool>& visited, vector<int>& preorder, int& preorderNo, 
+            vector<int>& lowlink, vector<int> dfsParent, vector<pair<int, int>> bridges) {
+        // TODO
+    }
+
+    void dfsCutVertices(int u, vector<bool>& visited, vector<int>& preorder, int& preorderNo, 
+            vector<int>& lowlink, vector<int> dfsParent, vector<bool> cutVertices) {
+        // TODO
     }
 };
 
