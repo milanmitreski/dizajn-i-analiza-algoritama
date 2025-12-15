@@ -103,11 +103,37 @@ public:
     }
 
     void bridges() {
-        // TODO
+        vector<bool> visited(this->m_n, false);
+        vector<int> preorder(this->m_n);
+        int preorderNo = 0;
+        vector<int> lowlink(this->m_n);
+        vector<int> dfsParent(this->m_n, -1);
+
+        vector<pair<int, int>> bridges;
+
+        dfsBridges(0, visited, preorder, preorderNo, lowlink, dfsParent, bridges); 
+        cout << "Mostovi u grafu su: ";
+        for(auto [u, v] : bridges) {
+            cout << "(" << u << ", " << v << ") ";
+        }
+        cout << endl;
     }
 
     void cutVertices() {
-        // TODO
+        vector<bool> visited(this->m_n, false);
+        vector<int> preorder(this->m_n);
+        int preorderNo = 0;
+        vector<int> lowlink(this->m_n);
+        vector<int> dfsParent(this->m_n, -1);
+        vector<bool> cutVertices(this->m_n, false);
+
+        dfsCutVertices(00, visited, preorder, preorderNo, lowlink, dfsParent, cutVertices);
+        cout << "Artikulacione tacke u rafu su: ";
+        for(int i = 0; i < this->m_n; i++) {
+            if(cutVertices[i])
+                cout << i << " ";
+        }
+        cout << endl;
     }
 private:
     vector<vector<int>> m_neighbours;
@@ -197,16 +223,79 @@ private:
     }
 
     void dfsBridges(int u, vector<bool>& visited, vector<int>& preorder, int& preorderNo, 
-            vector<int>& lowlink, vector<int> dfsParent, vector<pair<int, int>> bridges) {
-        // TODO
+            vector<int>& lowlink, vector<int>& dfsParent, vector<pair<int, int>>& bridges) {
+        visited[u] = true;
+        preorder[u] = preorderNo++;
+        lowlink[u] = preorder[u];
+
+        for(int neighbour : this->m_neighbours[u]) {
+            if(visited[neighbour]) {
+                if(neighbour != dfsParent[u] && preorder[neighbour] < lowlink[u]) {
+                    lowlink[u] = preorder[neighbour];
+                }
+            } else {
+                dfsParent[neighbour] = u;
+                dfsBridges(neighbour, visited, preorder, preorderNo, lowlink, dfsParent, bridges);
+
+                if(lowlink[neighbour] < lowlink[u]) {
+                    lowlink[u] = lowlink[neighbour];
+                }
+
+                if(lowlink[neighbour] > preorder[u]) {
+                    bridges.emplace_back(u, neighbour);
+                }
+            }
+        }
     }
 
     void dfsCutVertices(int u, vector<bool>& visited, vector<int>& preorder, int& preorderNo, 
-            vector<int>& lowlink, vector<int> dfsParent, vector<bool> cutVertices) {
-        // TODO
+            vector<int>& lowlink, vector<int>& dfsParent, vector<bool>& cutVertices) {
+        visited[u] = true;
+        preorder[u] = preorderNo++;
+        lowlink[u] = preorder[u];
+
+        int childNo = 0;
+
+        for(int neighbour : this->m_neighbours[u]) {
+            if(visited[neighbour]) {
+                if(neighbour != dfsParent[u] && preorder[neighbour] < lowlink[u]) {
+                    lowlink[u] = preorder[neighbour];
+                }
+            } else {
+                childNo++;
+                dfsParent[neighbour] = u;
+                dfsCutVertices(neighbour, visited, preorder, preorderNo, lowlink, dfsParent, cutVertices);
+                
+                if(lowlink[neighbour] < lowlink[u]) {
+                    lowlink[u] = lowlink[neighbour];
+                }
+                
+                // Ispitujemo da li je u artikulaciona tacka
+                // slucaj kada u nije koren
+                if(dfsParent[u] != -1 && lowlink[neighbour] >= preorder[u]) {
+                    cutVertices[u] = true;
+                }
+            }
+        }
+
+        // Ispitujemo da li je u artikulaciona tacka
+        // slucaj kada u jeste koren
+        if(dfsParent[u] == -1 && childNo > 1) {
+            cutVertices[u] = true;
+        }
     }
 };
 
 int main() {
+    int n, m; 
+    cin >> n >> m;
 
+    Graph g(n, false);
+
+    int start, end;
+    for(int j = 0; j < m; j++) {
+        cin >> start >> end;
+        g.addEdge(start, end);
+    }
+    g.cutVertices();
 }

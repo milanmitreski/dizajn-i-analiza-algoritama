@@ -101,7 +101,17 @@ public:
     }
 
     int num_paths(int s, int t) {
-        // TODO
+        vector<int> topsort = topSort(TopSort::Kahn);
+        vector<int> permutation(this->m_n);
+
+        for(int i = 0; i < this->m_n; i++) {
+            permutation[topsort[i]] = i; // permutation = topsort ^ -1 u smislu permutacija
+        }
+
+        vector<int> memo(this->m_n, -1);
+        int num = num_paths(s, t, permutation, memo);
+        cout << endl;
+        return num;
     }
 
 private:
@@ -150,15 +160,15 @@ private:
                     zeroInDegree.push(neighbour);
                 }
             }
+        }
 
-            if(visited == this->m_n) {
-                cout << "Topolosko sortiranje grafa: " << endl;
-                for(int i = 0; i < this->m_n; i++) {
-                    cout << topSort[i] << ": " << i+1 << endl;
-                }
-            } else {
-                cout << "Graf nije aciklicki" << endl;
+        if(visited == this->m_n) {
+            cout << "Topolosko sortiranje grafa: " << endl;
+            for(int i = 0; i < this->m_n; i++) {
+                cout << topSort[i] << ": " << i+1 << endl;
             }
+        } else {
+            cout << "Graf nije aciklicki" << endl;
         }
 
         return topSort;
@@ -195,11 +205,50 @@ private:
         topSort.push_back(u);
     }
 
-    int num_paths(const int s, const int t, const vector<int>& permutation) {
-        // TODO
+    int num_paths(const int s, const int t, const vector<int>& permutation,
+        vector<int>& memo) {
+
+        if(memo[s] != -1) {
+            return memo[s];
+        }
+
+        if(permutation[s] == permutation[t]) {
+            memo[s] = 1;
+            return memo[s]; // s i t su isti cvorovi
+        }
+        
+        if(permutation[s] > permutation[t]) {
+            memo[s] = 0;
+            return memo[s]; // s se nalazi nakon t u topoloskom sortiranju
+        }
+
+        memo[s] = 0; // ovde prvi put krecemo obradu cvora s
+        for(int neighbour : this->m_neighbours[s]) {
+            if(permutation[neighbour] <= permutation[t]) {
+                memo[s] += num_paths(neighbour, t, permutation, memo);
+            }
+        }
+
+        return memo[s];
     }
 };
 
 int main() {
-    // TODO
+    int n, m;
+    cin >> n >> m;
+
+    Graph network(n, true);
+
+    int start, end;
+    for(int j = 0; j < m; j++) {
+        cin >> start >> end;
+        network.addEdge(start, end);
+    }
+
+    int s, t;
+    cin >> s >> t;
+
+    int num_path = network.num_paths(s, t);
+    
+    cout << num_path << endl;
 }
