@@ -155,7 +155,7 @@ public:
         }
     }
 
-    void bridges() {
+    vector<pair<int, int>> bridges() {
         vector<bool> visited(this->m_n, false);
         vector<int> preorder(this->m_n);
         vector<int> lowlink(this->m_n);
@@ -169,6 +169,8 @@ public:
             cout << "(" << bridges[i].first << ", " << bridges[i].second << ") " ;
         }
         cout << endl;
+
+        return bridges;
     }
 
     void cutVertices() {
