@@ -7,6 +7,7 @@
 using namespace std;
 
 class WeightedGraph {
+public:
     WeightedGraph(int n, bool directed): m_n(n), m_directed(directed) {
         this->m_neighbours.resize(this->m_n);
     }
@@ -61,7 +62,7 @@ class WeightedGraph {
             }
 
             for(auto [neighbour, weight] : this->m_neighbours[vertex]) {
-                if(!visited[vertex]) {
+                if(!visited[neighbour]) {
                     if (distance[vertex] + weight < distance[neighbour]) {
                         distance[neighbour] = distance[vertex] + weight;
                         parent[neighbour] = vertex;
