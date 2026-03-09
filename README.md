@@ -32,6 +32,8 @@ kolokvijuma, nije moguće da u sledećim terminima opet izađe na nadoknadu.
 ### Ispit
 1. Usmeni ispit (50 poena)
 
+Uslov za polaganje ispita je ostvarenih $\geq 25$ poena na predispitnim obavezama i $\geq 25$ poena na usmenom ispitu.
+
 ## Konsultacije
 
 Konsultacije se održavaju po potrebi. Potrebno je pisati mejl na 
