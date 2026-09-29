@@ -45,3 +45,12 @@ dogovora.
 1. Prefiksno drvo
 2. Segmentno drvo
 3. Union-Find
+4. Pojam grafa. Programska reprezentacija grafa.
+5. DFS. BFS. Topološko sortiranje (Kanov algoritam, algoritam zasnovan na DFS).
+6. Mostovi (Tardžanov algoritam). Artikulacione tačke (Tardžanov algoritam).
+7. Jake komponente povezanosti (Tardžanov algoritam, Kosaradžuov algoritam).
+8. Težinski grafovi. Programska reprezentacija težinskog grafa. Najkraći putevi (Dajkstrin algoritam, Belman-Fordov algoritam). Minimalno razapinjuće stablo (Primov algoritam).
+9. Euklidov algoritam. Prošireni Euklidov algoritam. Faktorizacija. Eratostenovo sito. Ojlerova funkcija. Modularna aritmetika.
+10. Heširanje niski. Rabin-Karpov algoritam. Knut-Moris-Pratov algoritam.
+11. Programska reprezentacija tačke i vektora. Norma vektora. Skalarni proizvod. Vektorski proizvod. Kolinearnost tačaka. Pripadnost tačke duži. Površina trougla. Rastojanje tačke od prave. Orijentacija tačaka. Ispitivanje da li su tačke sa iste strane prave. Pripadnost tačke trouglu. Ispitivanje da li duž seče pravu. Konstrukcija prostog mnogougla.
+12. Ispitivanje da li se tačka nalazi u prostom mnogouglu. Konveksni omotač (Grejemov algoritam)
