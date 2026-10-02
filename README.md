@@ -1,38 +1,21 @@
-# Dizajn i analiza algoritama, 2025/2026
+# Dizajn i analiza algoritama, 2026/2027
 
 Obavezan kurs na četvrtoj godini Matematičkog fakulteta, za studente modula Matematika i računarstvo\
-Profesor: [prof. dr Filip Marić](http://poincare.matf.bg.ac.rs/~filip.maric)\
+Profesor: [prof. dr Sana Stojanović Đurđević](http://poincare.matf.bg.ac.rs/~sana.stojanovic.djurdjevic)\
 Asistent: [Milan Mitreski](http://poincare.matf.bg.ac.rs/~milan.mitreski)
 
 ## Obaveze na kursu
 
 ### Predispitne obaveze
 
-1. Domaći zadaci (20 poena). Domaći zadaci će biti zadavani u toku 
-semestra. Ukupan broj domaćih zadataka je 4 (po 5 poena). Odbrane domaćih 
-zadataka biće organizovane u toku semestra četiri puta (za svaki domaći 
-zadatak po jedna odbrana, na jednoj odbrani moguće je odbraniti više domaćih zadataka).
-U slučaju da se jedan domaći zadatak ne odbrani uspešno, student gubi pravo na poenesa domaćih zadataka.
-3. Kolokvijum (10 poena). Kolokvijum će biti organizovan u toku semestra. 
-Na kolokvijumu će se ispitivati grafovski algoritmi.
-4. Seminarski rad (20 poena). Temu biraju studenti, uz odobrenje profesora 
-i asistenta. Tema seminarskog rada treba da predstavlja praktičnu primenu 
-nekog od obrađenih algoritama na kursu. Izrada seminarskog rada je 
-obavezna.
-
-U slučaju da student nije izradio/odbranio neke domaće zadatake u toku 
-semestra ili nije izašao/nije zadovoljan rezultatima kolokvijuma u toku 
-semestra, ima pravo da u jednom od 3 termina (po jedan termin u spojenim 
-ispitnim rokovima, tj. Januar/Februar, Jun/Jul i Septembar/Oktobar) 
-odbrani sve preostale domaće zadatke koje je izradio kao i da opet polaže 
-kolokvijum. Domaći zadaci i kolokvijum se u tom slučaju moraju raditi u 
-istom terminu. Jednom kada student izađe na nadoknadu domaćih zadataka i 
-kolokvijuma, nije moguće da u sledećim terminima opet izađe na nadoknadu. 
+1. **Kolokvijum (2 kolokvijuma, po 20 poena).** Kolokvijumi će biti organizovan u kolokvijumskim nedeljama. Nadoknade kolokvijuma biće organizovane u ispitnim rokovima i to:
+    - Nadoknada prvog kolokvijuma u ispitnim rokovima: Januar 1, Jun 1, Septembar 1.
+    - Nadoknada drugog kolokvijuma u ispitnim rokovima: Januar 2, Jun 2, Septembar 2.
+2. **Seminarski rad (20 poena).** Temu biraju studenti, uz odobrenje profesora 
+i asistenta.
 
 ### Ispit
-1. Usmeni ispit (50 poena)
-
-Uslov za polaganje ispita je ostvarenih $\geq 25$ poena na predispitnim obavezama i $\geq 25$ poena na usmenom ispitu.
+1. Usmeni ispit (40 poena)
 
 ## Konsultacije
 
@@ -42,15 +25,4 @@ dogovora.
 
 ## Obrađene teme na kursu
 
-1. Prefiksno drvo
-2. Segmentno drvo
-3. Union-Find
-4. Pojam grafa. Programska reprezentacija grafa.
-5. DFS. BFS. Topološko sortiranje (Kanov algoritam, algoritam zasnovan na DFS).
-6. Mostovi (Tardžanov algoritam). Artikulacione tačke (Tardžanov algoritam).
-7. Jake komponente povezanosti (Tardžanov algoritam, Kosaradžuov algoritam).
-8. Težinski grafovi. Programska reprezentacija težinskog grafa. Najkraći putevi (Dajkstrin algoritam, Belman-Fordov algoritam). Minimalno razapinjuće stablo (Primov algoritam).
-9. Euklidov algoritam. Prošireni Euklidov algoritam. Faktorizacija. Eratostenovo sito. Ojlerova funkcija. Modularna aritmetika.
-10. Heširanje niski. Rabin-Karpov algoritam. Knut-Moris-Pratov algoritam.
-11. Programska reprezentacija tačke i vektora. Norma vektora. Skalarni proizvod. Vektorski proizvod. Kolinearnost tačaka. Pripadnost tačke duži. Površina trougla. Rastojanje tačke od prave. Orijentacija tačaka. Ispitivanje da li su tačke sa iste strane prave. Pripadnost tačke trouglu. Ispitivanje da li duž seče pravu. Konstrukcija prostog mnogougla.
-12. Ispitivanje da li se tačka nalazi u prostom mnogouglu. Konveksni omotač (Grejemov algoritam)
+1. Prefiksno drvo (02. oktobar 2026.)
