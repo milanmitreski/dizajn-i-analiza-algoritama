@@ -1,7 +1,7 @@
 # Dizajn i analiza algoritama, 2026/2027
 
 Obavezan kurs na četvrtoj godini Matematičkog fakulteta, za studente modula Matematika i računarstvo\
-Profesor: [prof. dr Sana Stojanović Đurđević](http://poincare.matf.bg.ac.rs/~sana.stojanovic.djurdjevic)\
+Profesor: [doc. dr Sana Stojanović Đurđević](http://poincare.matf.bg.ac.rs/~sana.stojanovic.djurdjevic)\
 Asistent: [Milan Mitreski](http://poincare.matf.bg.ac.rs/~milan.mitreski)
 
 ## Obaveze na kursu
