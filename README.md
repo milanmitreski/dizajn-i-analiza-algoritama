@@ -26,3 +26,4 @@ dogovora.
 ## Obrađene teme na kursu
 
 1. Prefiksno drvo (02. oktobar 2026.)
+2. Prefiksno drvo - zadaci. Segmentno stablo (16. oktobar 2026.)
