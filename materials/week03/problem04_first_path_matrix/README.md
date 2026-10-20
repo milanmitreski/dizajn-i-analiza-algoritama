@@ -1,0 +1,1 @@
+Tekst zadatka: [link](https://poincare.matf.bg.ac.rs/~filip/kiaa/01%20napredne_strukture_podataka/02%20disjunktni_skupovi/prvi_put_kroz_matricu/prvi_put_kroz_matricu-st.html)
