@@ -1,6 +1,6 @@
 ## Tekst zadatka
 
-Dat je niz pozitivnih celih brojeva `arr`. Uredjena trojka indeksa `(i,j,k)` za koju važi `i < j < k` je dobra trojka niza `arr` ako važi jedan od naredna dva uslova: `arr[i] < arr[j] < arr[k]` ili `arr[i] > arr[j] > arr[k]`. Odrediti broj uredjenih trojki niza `arr`.
+Dat je niz pozitivnih celih brojeva `arr`. Uredjena trojka indeksa `(i,j,k)` za koju važi `i < j < k` je dobra trojka niza `arr` ako važi jedan od naredna dva uslova: `arr[i] < arr[j] < arr[k]` ili `arr[i] > arr[j] > arr[k]`. Odrediti broj dobrih trojki niza `arr`.
 
 ## Opis ulaza i izlaza
 
