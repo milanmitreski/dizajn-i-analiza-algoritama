@@ -6,16 +6,13 @@ Asistent: [Milan Mitreski](http://poincare.matf.bg.ac.rs/~milan.mitreski)
 
 ## Obaveze na kursu
 
-### Predispitne obaveze
+### Seminarski rad (20 poena)
 
-1. **Kolokvijum (2 kolokvijuma, po 20 poena).** Kolokvijumi će biti organizovan u kolokvijumskim nedeljama. Nadoknade kolokvijuma biće organizovane u ispitnim rokovima i to:
-    - Nadoknada prvog kolokvijuma u ispitnim rokovima: Januar 1, Jun 1, Septembar 1.
-    - Nadoknada drugog kolokvijuma u ispitnim rokovima: Januar 2, Jun 2, Septembar 2.
-2. **Seminarski rad (20 poena).** Temu biraju studenti, uz odobrenje profesora 
-i asistenta.
+Više informacija o seminarskom radu biće objavljeno uskoro.
 
-### Ispit
-1. Usmeni ispit (40 poena)
+### Kolokvijumi
+
+U kolokvijumskim nedeljama biće organizovani praktični i teorijski kolokvijumi, koji će se polagati istog dana u odvojenim terminima (jedan posle drugog). Biće organizovana dva kolokvijuma. Na svakom od kolokvijuma se može ostvariti maksimalno 40 poena (20 poena na praktičnom delu i 20 poena na teorijskom delu).
 
 ## Konsultacije
 
@@ -25,5 +22,7 @@ dogovora.
 
 ## Obrađene teme na kursu
 
-1. Prefiksno drvo (02. oktobar 2026.)
-2. Prefiksno drvo - zadaci. Segmentno stablo (16. oktobar 2026.)
+1. Prefiksno drvo - teorija. (02. oktobar 2026.)
+2. Prefiksno drvo - zadaci. Segmentno stablo. (16. oktobar 2026.)
+3. Segmentno stablo. (23. oktobar 2026.)
+4. Segmentno stablo. UnionFind. (30. oktobar 2026.)
