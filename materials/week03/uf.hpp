@@ -9,11 +9,25 @@ namespace matf_daa {
 
         int find(int x);
         void unite(int x, int y);
+
+        // problem05_archipelago
+        int get_components() const;
+        int get_size(int x);
+
+        // problem06_ratios
+        int find_with_ratio(int x, float& wx);
+        void unite_with_ratio(int x, int y, float w);
     private:
         int m_n;
         std::vector<int> m_parent;
         std::vector<int> m_rang;
         std::vector<int> m_size;
+
+        // problem05_archipelago
+        int m_components;
+        
+        // problem06_ratios
+        std::vector<float> m_parent_ratio;
 
         void unite_size(int x, int y);
         void unite_rang(int x, int y);
