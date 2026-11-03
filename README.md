@@ -26,3 +26,4 @@ dogovora.
 2. Prefiksno drvo - zadaci. Segmentno stablo. (16. oktobar 2026.)
 3. Segmentno stablo. (23. oktobar 2026.)
 4. Segmentno stablo. UnionFind. (30. oktobar 2026.)
+5. UnionFind. Grafovi (predstavljanje grafa, DFS, BFS) (02. novembar 2026.)

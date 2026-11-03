@@ -1,0 +1,1 @@
+Tekst zadatka: [link](http://algoritmi.matf.bg.ac.rs/kiaa/05/01_korensko_drvo.html)

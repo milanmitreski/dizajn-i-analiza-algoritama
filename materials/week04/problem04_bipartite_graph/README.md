@@ -1,0 +1,1 @@
+Tekst zadatka: [link](https://www.algoritmi.matf.bg.ac.rs/kiaa/05/04_bipartitan_graf.html)
