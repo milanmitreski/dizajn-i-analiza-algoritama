@@ -14,10 +14,14 @@ Više informacija o seminarskom radu biće objavljeno uskoro.
 
 U kolokvijumskim nedeljama biće organizovani praktični i teorijski kolokvijumi, koji će se polagati istog dana u odvojenim terminima (jedan posle drugog). Biće organizovana dva kolokvijuma. Na svakom od kolokvijuma se može ostvariti maksimalno 40 poena (20 poena na praktičnom delu i 20 poena na teorijskom delu).
 
+### Prvi kolokvijum
+
+Gradivo za prvi kolokvijum obuhvata prvih 7 nedelja vežbi, tj. direktorijume `week01`, `week02`, `week03`, `week04` i `week05`. Blagovremeno će biti objavljene ostale informacije o kolokvijumu.
+
 ## Konsultacije
 
-Konsultacije se održavaju po potrebi. Potrebno je pisati mejl na 
-[milan.mitreski@matf.bg.ac.rs](mailto:milan.mitreski@matf.bg.ac.rs) radi 
+Konsultacije se održavaju po potrebi. Potrebno je pisati mejl na
+[milan.mitreski@matf.bg.ac.rs](mailto:milan.mitreski@matf.bg.ac.rs) radi
 dogovora.
 
 ## Obrađene teme na kursu
@@ -27,3 +31,5 @@ dogovora.
 3. Segmentno stablo. (23. oktobar 2026.)
 4. Segmentno stablo. UnionFind. (30. oktobar 2026.)
 5. UnionFind. Grafovi (predstavljanje grafa, DFS, BFS) (02. novembar 2026.)
+6. Grafovi (DFS, BFS) (06. novembar 2026.)
+7. Grafovi (Topološko sortiranje. Mostovi. Artikulacione tačke) (13. novembar 2026.)
