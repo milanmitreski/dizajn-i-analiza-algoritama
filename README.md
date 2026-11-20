@@ -8,7 +8,7 @@ Asistent: [Milan Mitreski](http://poincare.matf.bg.ac.rs/~milan.mitreski)
 
 ### Seminarski rad (20 poena)
 
-Sve informacije o seminarskom radu mogu se pronaći [ovde](https://docs.google.com/document/d/1ZRNaryIq1b0wdd4MxVmRWqElWpgtBGrJ5B9OFY4eLE0/edit?tab=t.0#heading=h.yfxfcmfzcmhx).
+Sve informacije o seminarskom radu mogu se pronaći [ovde](https://docs.google.com/document/d/1ZRNaryIq1b0wdd4MxVmRWqElWpgtBGrJ5B9OFY4eLE0/edit?tab=t.0#heading=h.yfxfcmfzcmhx). Za sve nedoumice kontaktirati profesora **i** asistenta putem mejla.
 
 ### Kolokvijumi
 
