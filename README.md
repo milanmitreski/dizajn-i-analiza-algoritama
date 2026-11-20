@@ -8,7 +8,7 @@ Asistent: [Milan Mitreski](http://poincare.matf.bg.ac.rs/~milan.mitreski)
 
 ### Seminarski rad (20 poena)
 
-Više informacija o seminarskom radu biće objavljeno uskoro.
+Sve informacije o seminarskom radu mogu se pronaći [ovde](https://docs.google.com/document/d/1ZRNaryIq1b0wdd4MxVmRWqElWpgtBGrJ5B9OFY4eLE0/edit?tab=t.0#heading=h.yfxfcmfzcmhx).
 
 ### Kolokvijumi
 
@@ -16,7 +16,9 @@ U kolokvijumskim nedeljama biće organizovani praktični i teorijski kolokvijumi
 
 ### Prvi kolokvijum
 
-Gradivo za prvi kolokvijum obuhvata prvih 7 nedelja vežbi, tj. direktorijume `week01`, `week02`, `week03`, `week04` i `week05`. Blagovremeno će biti objavljene ostale informacije o kolokvijumu.
+Prvi kolokvijum sastoji se od dva zadatka. Gradivo za prvi kolokvijum obuhvata prvih 7 nedelja vežbi, tj. direktorijume `week01`, `week02`, `week03`, `week04` i `week05`. U direktorijumu `exam_materials` mogu se naći materijali koji će biti dostupni studentima na prvom kolokvijumu. Od studenata će se očekivati da upotrebom dostupnih materijala reše zadate zadatke, na sličan način kako je to rađeno na časovima vežbi. \
+\
+Termin prvog kolokvijuma u prvoj kolokvijumskoj nedelji je **petak, 27.11.2026 u 18:00**, pri čemu će se **prvo polagati teorijski deo u trajanju od 1 sat**, a nakon toga **praktični deo u trajanju od 1 sat**, uz pauzu od 15 minuta između dva dela.
 
 ## Konsultacije
 
